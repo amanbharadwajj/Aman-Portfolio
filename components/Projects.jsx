@@ -68,8 +68,8 @@ const Projects = () => {
                 <Image
                   src={proj.image}
                   alt={proj.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: 'cover' }}
                   className="hover:scale-105 transition-transform duration-300"
                 />
               </div>

@@ -27,9 +27,8 @@ const About = () => {
   <Image
   src="/assets/page/about.jpeg"
   alt="Profile"
-  layout="fill"
-  objectFit="cover"
-  objectPosition="top"
+  fill
+  style={{ objectFit: 'cover', objectPosition: 'top' }}
   className="rounded-full"
 />
 
@@ -37,7 +36,7 @@ const About = () => {
 </div>
 
                     <h3 className="text-2xl font-bold text-gray-800 text-center mb-2">
-                        Ankur Sharma
+                        Aman Kumar
                     </h3>
                     <p className="text-center text-gray-500 mb-6">Full Stack Developer</p>
                     <div className="flex flex-wrap justify-center gap-3 text-sm text-white">

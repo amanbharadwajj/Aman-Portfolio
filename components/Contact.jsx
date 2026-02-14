@@ -49,9 +49,9 @@ const Contact = () => {
                 src="/assets/page/contact.jpg"
                 width={500}
                 height={350}
-                alt="Contact Ankur Sharma"
+                alt="Contact Aman Kumar"
               />
-              <h2 className="py-4 text-2xl font-semibold text-indigo-700">Ankur Sharma</h2>
+              <h2 className="py-4 text-2xl font-semibold text-indigo-700">Aman Kumar</h2>
               <p className="text-gray-700 font-medium">Full-Stack Developer</p>
               <p className="py-4 text-gray-600">
                 I am available for freelance or full-time positions. Contact me and let&apos;s talk.
@@ -88,15 +88,14 @@ const Contact = () => {
                 >
                   <AiOutlineMail size={24} />
                 </a>
-                <Link href="https://bit.ly/48fXEn6" passHref>
-                  <a
+                <Link 
+                    href="https://bit.ly/48fXEn6"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Resume"
                     className="rounded-full shadow-lg shadow-indigo-200 p-5 text-indigo-700 hover:shadow-indigo-400 hover:scale-110 transition-transform duration-300"
                   >
                     <BsFillPersonLinesFill size={24} />
-                  </a>
                 </Link>
               </div>
             </div>
@@ -186,12 +185,10 @@ const Contact = () => {
         </div>
 
         <div className="flex justify-center pt-16">
-          <Link href="#top">
-            <a aria-label="Back to top">
+          <Link href="#top" aria-label="Back to top">
               <div className="rounded-full shadow-lg shadow-indigo-200 p-4 cursor-pointer hover:scale-110 transition-transform duration-300">
                 <HiOutlineChevronDoubleUp className="text-indigo-600" size={30} />
               </div>
-            </a>
           </Link>
         </div>
       </div>
