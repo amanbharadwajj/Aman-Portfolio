@@ -60,11 +60,11 @@ const Contact = () => {
               <div className="space-y-3 text-sm text-slate-300">
                 <p className="flex items-center gap-2">
                   <AiOutlineEnvironment className="text-brand-sky" size={18} />
-                  Delhi / India
+                  Delhi, India
                 </p>
                 <p className="flex items-center gap-2">
                   <AiOutlineMail className="text-brand-sky" size={18} />
-                  amanbharadwajjj@gmail.com
+                  amankumar63528@gmail.com
                 </p>
                 <p className="flex items-center gap-2">
                   <AiOutlinePhone className="text-brand-sky" size={18} />
@@ -111,7 +111,7 @@ const Contact = () => {
                   <Image src="/assets/page/naukri.png" width={24} height={24} alt="Naukri" className="object-contain" />
                 </a>
                 <a
-                  href="mailto:amanbharadwajjj@gmail.com"
+                  href="mailto:amankumar63528@gmail.com"
                   aria-label="Send Email"
                   className="rounded-full p-5 bg-slate-800 text-brand-sky border border-slate-700 shadow-lg shadow-black/30 hover:bg-brand-sky hover:text-slate-900 hover:-translate-y-1 transition-all duration-300"
                 >
