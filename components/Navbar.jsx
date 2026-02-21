@@ -66,7 +66,9 @@ const Navbar = () => {
                     />
                 </Link>
                 <div>
-                    <ul className="hidden md:flex items-center text-brand-sky">
+                    <ul
+                        className="hidden md:flex items-center text-brand-sky"
+                    >
                         <li className="ml-10 text-sm uppercase transition-colors hover:text-sky-300">
                             <Link href="/">Home</Link>
                         </li>
@@ -74,10 +76,16 @@ const Navbar = () => {
                             <Link href="/#about">About</Link>
                         </li>
                         <li className="ml-10 text-sm uppercase transition-colors hover:text-sky-300">
+                            <Link href="/#skills">Skills</Link>
+                        </li>
+                        <li className="ml-10 text-sm uppercase transition-colors hover:text-sky-300">
                             <Link href="/#case-studies">Case Studies</Link>
                         </li>
                         <li className="ml-10 text-sm uppercase transition-colors hover:text-sky-300">
-                            <Link href="/#certifications">Certifications</Link>
+                            <Link href="/#work-experience">Work-Experience</Link>
+                        </li>
+                        <li className="ml-10 text-sm uppercase transition-colors hover:text-sky-300">
+                            <a href="https://drive.google.com/file/d/1RI6qpdJPfinaBoFqm33J2KA-QCSLQofx/view?usp=drive_link" target="_blank" rel="noreferrer">Resume</a>
                         </li>
                         <li className="ml-10 text-sm uppercase transition-colors hover:text-sky-300">
                             <Link href="/#contact">Contact</Link>
@@ -136,11 +144,11 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className="py-4 flex flex-col">
-                        <ul className="uppercase space-y-1">
+                        <ul className="uppercase">
                             <Link href="/">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-3 text-sm"
+                                    className="py-4 text-sm"
                                 >
                                     Home
                                 </li>
@@ -148,31 +156,48 @@ const Navbar = () => {
                             <Link href="/#about">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-3 text-sm"
+                                    className="py-4 text-sm"
                                 >
                                     About
+                                </li>
+                            </Link>
+                            <Link href="/#skills">
+                                <li
+                                    onClick={() => setNav(false)}
+                                    className="py-4 text-sm"
+                                >
+                                    Skills
                                 </li>
                             </Link>
                             <Link href="/#case-studies">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-3 text-sm"
+                                    className="py-4 text-sm"
                                 >
                                     Case Studies
                                 </li>
                             </Link>
-                            <Link href="/#certifications">
+                            <Link href="/#work-experience">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-3 text-sm"
+                                    className="py-4 text-sm"
                                 >
-                                    Certifications
+                                    Work-Experience
                                 </li>
                             </Link>
+                            <a
+                                href="https://drive.google.com/file/d/1RI6qpdJPfinaBoFqm33J2KA-QCSLQofx/view?usp=drive_link"
+                                target="_blank"
+                                rel="noreferrer"
+                                onClick={() => setNav(false)}
+                                className="py-4 text-sm"
+                            >
+                                Resume
+                            </a>
                             <Link href="/#contact">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-3 text-sm"
+                                    className="py-4 text-sm"
                                 >
                                     Contact
                                 </li>
