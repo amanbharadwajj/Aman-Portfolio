@@ -6,7 +6,8 @@
         "build": "next build",
         "dev": "next dev",
         "start": "next start",
-        "lint": "next lint"
+        "lint": "next lint",
+        "deploy": "npm run build && firebase deploy --only hosting"
     },
     "dependencies": {
         "build": "^0.1.4",

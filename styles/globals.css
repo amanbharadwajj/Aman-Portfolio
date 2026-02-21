@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .perspective-1000 {
   perspective: 1000px;
@@ -20,7 +20,9 @@ html {
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+    --tw-text-opacity: 1;
+    @apply bg-[#ecf0f3] tracking-wide;
+    color: rgb(56 189 248 / var(--tw-text-opacity));
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -28,7 +30,7 @@ html {
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl font-[Raleway]
+    @apply text-4xl sm:text-5xl md:text-6xl
   }
 
   h2 {
@@ -41,5 +43,84 @@ html {
 
   button {
     @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+  }
+}
+
+body.alt-page {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  --tw-text-opacity: 1;
+  color: rgb(56 189 248 / var(--tw-text-opacity));
+}
+
+body.alt-page h2 {
+  color: #38bdf8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+nav {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 15px 8%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+nav a {
+  color: #cbd5e1;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+body.alt-page section {
+  padding: 80px 10%;
+}
+
+.case-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: 0.4s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.case-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid #38bdf8;
+}
+
+.company-logo {
+  width: 60px;
+  filter: brightness(0) invert(1);
+}
+
+.impact {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+@layer utilities {
+  .text-brand-sky {
+    --tw-text-opacity: 1;
+    color: rgb(56 189 248 / var(--tw-text-opacity));
+  }
+
+  .bg-brand-sky {
+    --tw-bg-opacity: 1;
+    background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+  }
+
+  .hover\:bg-brand-sky-dark:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(14 165 233 / var(--tw-bg-opacity));
   }
 }

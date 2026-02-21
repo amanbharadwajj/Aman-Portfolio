@@ -1,103 +1,143 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import propertyImg from "../public/assets/projects/property.png";
-import cryptoImg from "../public/assets/projects/crypto.png";
-import netflixImg from "../public/assets/projects/netflix.png";
-import twitchImg from "../public/assets/projects/twitch.png";
 
-const projects = [
+const caseStudies = [
   {
-    title: "Friendify",
-    image: propertyImg,
-    url: "/property",
-    tech: [
-      "Vue.js",
-      "Socket.io",
-      "Node.js",
-      "Cloudinary",
-      "JWT",
-      "Chakra UI",
-      "MongoDB",
+    title: "Enrollment Conversion Optimization - Sarrthi IAS",
+    website: "https://sarrthiias.com",
+    logo: "/assets/Companies/sarrthiias.png",
+    logoAlt: "Sarrthi IAS Logo",
+    tags: ["Sales Funnel", "Objection Handling", "Follow-Up Cadence"],
+    problem:
+      "UPSC aspirants hesitated due to pricing concerns, trust issues, and batch selection confusion.",
+    actions: [
+      "Structured counselling & qualification funnel",
+      "Handled price & trust-based objections strategically",
+      "Implemented systematic follow-up framework",
+      "Used urgency & personalized guidance for faster decisions",
     ],
-  },
-  {
-    title: "Gadgetry App",
-    image: cryptoImg,
-    url: "/crypto",
-    tech: [
-      "React.js",
-      "Redux",
-      "Firebase",
-      "MongoDB",
-      "Node.js",
-      "Express",
-      "Stripe API",
+    results: [
+      "Reduced lead hesitation through structured objection handling",
+      "Shortened lead-to-enrollment turnaround through guided counselling flows",
+      "Improved conversion consistency via disciplined follow-up execution",
     ],
+    keyImpact: "Consistently exceeded monthly enrollment targets.",
   },
   {
-    title: "Memories App",
-    image: netflixImg,
-    url: "/netflix",
-    tech: ["React.js", "Firebase", "MongoDB", "Node.js", "Express"],
+    title: "Performance Marketing Structuring - Vioray.in",
+    website: "https://vioray.in",
+    logo: "/assets/Companies/Vioray.png",
+    logoAlt: "Vioray Logo",
+    tags: ["Content Strategy", "Meta Ads", "Campaign Tracking"],
+    problem:
+      "Needed structured digital presence & better performance marketing direction.",
+    actions: [
+      "Designed Instagram & Facebook content calendar",
+      "Created creatives using Canva",
+      "Structured Meta Ads campaigns",
+      "Monitored engagement & performance metrics",
+    ],
+    results: [
+      "Improved engagement consistency across campaigns",
+      "Strengthened funnel-based lead conversion approach through ad structuring",
+      "Increased campaign predictability with metric-led optimization cycles",
+    ],
+    keyImpact: "Built a repeatable performance-marketing execution framework.",
   },
   {
-    title: "Crime Locator",
-    image: twitchImg,
-    url: "/twitch",
-    tech: ["React.js", "Mapbox API"],
+    title: "Structured Lead Qualification & Sales Enablement - SBI Life",
+    website: "https://www.sbilife.co.in",
+    logo: "/assets/Companies/SBI_Logo.png",
+    logoAlt: "SBI Life Logo",
+    tags: ["Lead Research", "CRM Tracking", "Sales Enablement"],
+    problem:
+      "Need for systematic lead identification and client communication support.",
+    actions: [
+      "Conducted market research to identify potential leads",
+      "Used CRM tools for opportunity tracking",
+      "Assisted clients with tailored product recommendations",
+      "Maintained accurate reporting for management review",
+    ],
+    results: [
+      "Increased conversion predictability via CRM tracking discipline",
+      "Improved lead qualification quality through structured market research",
+      "Strengthened advisor enablement with more actionable client insights",
+    ],
+    keyImpact: "Improved lead pipeline clarity for faster sales follow-through.",
   },
 ];
 
 const Projects = () => {
   return (
-    <div id="projects" className="w-full bg-gray-100 py-16 px-4">
+    <section id="case-studies" className="w-full py-16 px-4">
       <div className="max-w-[1240px] mx-auto">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5] text-center">
-          Projects
+        <p className="text-xl tracking-widest uppercase text-sky-400 font-semibold text-center">
+          Case Studies
         </p>
-        <h2 className="py-4 text-3xl font-bold text-center">What I&apos;ve Built</h2>
+        <h2 className="py-4 text-3xl font-bold text-center">Growth & Revenue Case Studies</h2>
 
-        <div className="grid md:grid-cols-2 gap-10 mt-10">
-          {projects.map((proj, idx) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+          {caseStudies.map((study) => (
             <div
-              key={idx}
-              className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden"
+              key={study.title}
+              className="case-card"
             >
-              <div className="relative h-56 w-full">
+              <div className="flex items-center gap-3 mb-4">
                 <Image
-                  src={proj.image}
-                  alt={proj.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  className="hover:scale-105 transition-transform duration-300"
+                  src={study.logo}
+                  alt={study.logoAlt}
+                  width={55}
+                  height={55}
+                  className="company-logo h-[55px] w-[55px] object-contain"
                 />
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-3 text-gray-800">
-                  {proj.title}
+                <h3 className="text-lg font-semibold text-slate-100 leading-snug">
+                  <a
+                    href={study.website}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-sky-400 transition-colors"
+                  >
+                    {study.title}
+                  </a>
                 </h3>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {proj.tech.map((t, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-1 bg-indigo-100 text-indigo-600 text-xs font-medium rounded-full"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-                <Link href={proj.url}>
-  <span className="inline-block mt-2 px-4 py-2 bg-[#5651e5] text-white rounded-lg text-sm hover:bg-indigo-700 transition cursor-pointer">
-    View Project
-  </span>
-</Link>
               </div>
-            </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {study.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 text-xs font-semibold rounded-full bg-slate-800 text-sky-300 border border-slate-700"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <p className="text-sm text-slate-300 mb-4">
+                <strong>Problem:</strong> {study.problem}
+              </p>
+
+              <p className="text-sm font-semibold text-slate-100 mb-2">Action:</p>
+              <ul className="list-disc list-inside text-sm text-slate-300 space-y-1 mb-4">
+                {study.actions.map((action) => (
+                  <li key={action}>{action}</li>
+                ))}
+              </ul>
+
+              <p className="text-sm font-semibold text-slate-100 mb-2">Result:</p>
+              <ul className="list-disc list-inside text-sm text-slate-300 space-y-1">
+                {study.results.map((result) => (
+                  <li key={result}>{result}</li>
+                ))}
+              </ul>
+              <p className="impact">
+                Key Impact: {study.keyImpact}
+              </p>
+              </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
