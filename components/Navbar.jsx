@@ -114,10 +114,10 @@ const Navbar = () => {
                 <div
                     className={
                         nav
-                            ? ` fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen p-10 ease-in duration-500 ${
+                            ? ` fixed left-0 top-0 w-[82%] sm:w-[60%] md:w-[45%] h-screen overflow-y-auto p-6 sm:p-10 ease-in duration-500 ${
                                   isAlternatePage ? "bg-slate-900 text-slate-200" : "bg-[#ecf0f3] text-[#1f2937]"
                               }`
-                            : "fixed left-[-100%] top-0 p-10 ease-in duration-500"
+                            : "fixed left-[-100%] top-0 p-6 sm:p-10 ease-in duration-500"
                     }
                 >
                     <div>
@@ -143,12 +143,12 @@ const Navbar = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="py-4 flex flex-col">
-                        <ul className="uppercase">
+                    <div className="py-2 sm:py-4 flex flex-col">
+                        <ul className={`uppercase ${isAlternatePage ? "text-slate-100" : "text-slate-700"}`}>
                             <Link href="/">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-4 text-sm"
+                                    className="py-3 text-sm font-semibold hover:text-sky-400 transition-colors"
                                 >
                                     Home
                                 </li>
@@ -156,7 +156,7 @@ const Navbar = () => {
                             <Link href="/#about">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-4 text-sm"
+                                    className="py-3 text-sm font-semibold hover:text-sky-400 transition-colors"
                                 >
                                     About
                                 </li>
@@ -164,7 +164,7 @@ const Navbar = () => {
                             <Link href="/#skills">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-4 text-sm"
+                                    className="py-3 text-sm font-semibold hover:text-sky-400 transition-colors"
                                 >
                                     Skills
                                 </li>
@@ -172,7 +172,7 @@ const Navbar = () => {
                             <Link href="/#case-studies">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-4 text-sm"
+                                    className="py-3 text-sm font-semibold hover:text-sky-400 transition-colors"
                                 >
                                     Case Studies
                                 </li>
@@ -180,7 +180,7 @@ const Navbar = () => {
                             <Link href="/#work-experience">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-4 text-sm"
+                                    className="py-3 text-sm font-semibold hover:text-sky-400 transition-colors"
                                 >
                                     Work-Experience
                                 </li>
@@ -190,20 +190,20 @@ const Navbar = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 onClick={() => setNav(false)}
-                                className="py-4 text-sm"
+                                className="py-3 text-sm font-semibold hover:text-sky-400 transition-colors block"
                             >
                                 Resume
                             </a>
                             <Link href="/#contact">
                                 <li
                                     onClick={() => setNav(false)}
-                                    className="py-4 text-sm"
+                                    className="py-3 text-sm font-semibold hover:text-sky-400 transition-colors"
                                 >
                                     Contact
                                 </li>
                             </Link>
                         </ul>
-                        <div className="pt-40">
+                        <div className="pt-8 sm:pt-16 pb-6">
                             <p className={`uppercase tracking-widest ${isAlternatePage ? "text-sky-400" : "text-brand-sky"}`}>
                                 Let&#39;s Connect
                             </p>

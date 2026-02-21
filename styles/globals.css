@@ -77,7 +77,7 @@ nav a:hover {
 }
 
 body.alt-page section {
-  padding: 80px 10%;
+  padding: 72px 16px;
 }
 
 .case-card {
@@ -122,5 +122,21 @@ body.alt-page section {
   .hover\:bg-brand-sky-dark:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(14 165 233 / var(--tw-bg-opacity));
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 16px;
+  }
+
+  .case-card {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body.alt-page section {
+    padding: 80px 10%;
   }
 }
